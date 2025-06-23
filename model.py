@@ -19,11 +19,11 @@ class Encoder(nn.Module):
         super(Encoder, self).__init__()
 
         # Hierarchical Medoid-based feature extraction layers
-        self.sa_module_1 = MedoidGenerator(npoint=512, nsample=k_g, in_channel=3, mlp=[64, 128], group_all=False, if_bn=False, if_idx=True)
+        self.generator_1 = MedoidGenerator(npoint=512, nsample=k_g, in_channel=3, mlp=[64, 128], group_all=False, if_bn=False, if_idx=True)
         self.transformer_1 = MedoidTransformer(128, dim=64, n_knn=k_t)
-        self.sa_module_2 = MedoidGenerator(128, k_g, 128, [128, 256], group_all=False, if_bn=False, if_idx=True)
+        self.generator_2 = MedoidGenerator(128, k_g, 128, [128, 256], group_all=False, if_bn=False, if_idx=True)
         self.transformer_2 = MedoidTransformer(256, dim=64, n_knn=k_t)
-        self.sa_module_3 = MedoidGenerator(None, None, 256, [512, out_dim], group_all=True, if_bn=False)
+        self.generator_3 = MedoidGenerator(None, None, 256, [512, out_dim], group_all=True, if_bn=False)
 
     def forward(self, point_cloud):
         """
@@ -36,15 +36,15 @@ class Encoder(nn.Module):
         l0_points = point_cloud
 
         # Stage 1: Medoid-based sampling and feature extraction
-        l1_xyz, l1_points, idx1 = self.sa_module_1(l0_xyz, l0_points)
+        l1_xyz, l1_points, idx1 = self.generator_1(l0_xyz, l0_points)
         l1_points = self.transformer_1(l1_points, l1_xyz)
 
         # Stage 2: Deeper medoid feature extraction
-        l2_xyz, l2_points, idx2 = self.sa_module_2(l1_xyz, l1_points)
+        l2_xyz, l2_points, idx2 = self.generator_2(l1_xyz, l1_points)
         l2_points = self.transformer_2(l2_points, l2_xyz)
 
         # Stage 3: Global feature aggregation
-        l3_xyz, l3_points = self.sa_module_3(l2_xyz, l2_points)
+        l3_xyz, l3_points = self.generator_3(l2_xyz, l2_points)
 
         return l3_points
 
