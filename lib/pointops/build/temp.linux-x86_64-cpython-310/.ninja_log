@@ -1,0 +1,14 @@
+# ninja log v5
+1	6168	1690447838282476374	/home/ttpn997/Papers/IEEE-Sensor-2023/code/lib/pointops/build/temp.linux-x86_64-cpython-310/src/aggregation/aggregation_cuda.o	d5da948e61feba7c
+1	6242	1690447838354478538	/home/ttpn997/Papers/IEEE-Sensor-2023/code/lib/pointops/build/temp.linux-x86_64-cpython-310/src/grouping/grouping_cuda.o	fd6a433b2c86fe61
+2	6318	1690447838434480944	/home/ttpn997/Papers/IEEE-Sensor-2023/code/lib/pointops/build/temp.linux-x86_64-cpython-310/src/subtraction/subtraction_cuda.o	2f2d9be37e7ed9e9
+2	8882	1690447840998557379	/home/ttpn997/Papers/IEEE-Sensor-2023/code/lib/pointops/build/temp.linux-x86_64-cpython-310/src/interpolation/interpolation_cuda.o	e731f9361b08e08
+2	8948	1690447841062559264	/home/ttpn997/Papers/IEEE-Sensor-2023/code/lib/pointops/build/temp.linux-x86_64-cpython-310/src/knnquery/knnquery_cuda.o	5230b9f374e50cfa
+2	9654	1690447841770580094	/home/ttpn997/Papers/IEEE-Sensor-2023/code/lib/pointops/build/temp.linux-x86_64-cpython-310/src/sampling/sampling_cuda.o	b4939cdc0ab761b2
+2	12084	1690447844198650769	/home/ttpn997/Papers/IEEE-Sensor-2023/code/lib/pointops/build/temp.linux-x86_64-cpython-310/src/interpolation/interpolation_cuda_kernel.o	eec9d390d0c8abd3
+1	12221	1690447844338654801	/home/ttpn997/Papers/IEEE-Sensor-2023/code/lib/pointops/build/temp.linux-x86_64-cpython-310/src/aggregation/aggregation_cuda_kernel.o	71f637c734d18397
+1	12474	1690447844590662055	/home/ttpn997/Papers/IEEE-Sensor-2023/code/lib/pointops/build/temp.linux-x86_64-cpython-310/src/grouping/grouping_cuda_kernel.o	563d437c92ac213c
+2	12669	1690447844782667581	/home/ttpn997/Papers/IEEE-Sensor-2023/code/lib/pointops/build/temp.linux-x86_64-cpython-310/src/knnquery/knnquery_cuda_kernel.o	cb29fa7b6d0372db
+2	12838	1690447844954672534	/home/ttpn997/Papers/IEEE-Sensor-2023/code/lib/pointops/build/temp.linux-x86_64-cpython-310/src/subtraction/subtraction_cuda_kernel.o	c98457860766f58b
+2	13367	1690447845482687634	/home/ttpn997/Papers/IEEE-Sensor-2023/code/lib/pointops/build/temp.linux-x86_64-cpython-310/src/sampling/sampling_cuda_kernel.o	2acf33d76476607d
+2	14432	1690447846542717814	/home/ttpn997/Papers/IEEE-Sensor-2023/code/lib/pointops/build/temp.linux-x86_64-cpython-310/src/pointops_api.o	1c3cdc9966ae1ef7
